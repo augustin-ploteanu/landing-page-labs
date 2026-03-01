@@ -146,18 +146,12 @@ section p {
   background-color: #fff;
 }
 
-#cta p {
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/* form */
 #cta form {
   margin-top: 25px;
-  text-align: left;
   max-width: 520px;
   margin-left: auto;
   margin-right: auto;
+  text-align: left;
 }
 
 #cta fieldset {
@@ -167,34 +161,37 @@ section p {
 
 #cta legend {
   font-weight: 700;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
 
-#cta label {
-  font-weight: 600;
+#cta input,
+#cta select,
+#cta button {
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 8px;
+  margin-bottom: 18px;
+  padding: 14px 16px;
+  border-radius: 8px;
+  font: inherit;
 }
 
 #cta input,
 #cta select {
-  width: 100%;
-  margin-top: 8px;
-  padding: 12px 14px;
-  border-radius: 6px;
   border: 1px solid #ddd;
-  font: inherit;
 }
 
 #cta button {
-  width: 100%;
-  margin-top: 10px;
-  padding: 12px 18px;
   border: 0;
-  border-radius: 6px;
-  background-color: #fff;
-  color: #111;
+  background-color: #111;
+  color: #fff;
   font-weight: 700;
   cursor: pointer;
   transition: 0.3s ease;
+}
+
+#cta button:hover {
+  background-color: #333;
 }
 
 #cta button:hover {
