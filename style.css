@@ -323,6 +323,15 @@ footer .container {
   z-index: 1200;
   display: inline-flex;
   align-items: flex-end;
+  opacity: 0;
+  animation: show-mascot 0.5s ease forwards;
+  animation-delay: 0.5s;
+}
+
+@keyframes show-mascot {
+  to {
+    opacity: 1;
+  }
 }
 
 .mascot img {
