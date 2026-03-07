@@ -282,6 +282,19 @@ header .container {
   background-color: transparent;
 }
 
+@media (max-width: 767px) {
+  .navbar-collapse {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 60px;
+    width: 100vw;
+    background-color: #fff;
+    padding: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  }
+}
+
 /*footer*/
 footer {
   background-color: #111;
