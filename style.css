@@ -327,6 +327,7 @@ footer .container {
   box-shadow: 0 10px 24px rgba(0, 0, 0, 0.25);
   transform-origin: bottom right;
   animation: mascot-pulse 2.2s ease-in-out infinite;
+  cursor: pointer;
 }
 
 .mascot-message {
@@ -349,7 +350,15 @@ footer .container {
   transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease;
 }
 
-.mascot:hover .mascot-message {
+@media (hover: hover) and (pointer: fine) {
+  .mascot:hover .mascot-message {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+}
+
+.mascot.is-open .mascot-message {
   opacity: 1;
   visibility: visible;
   transform: translateY(0);
