@@ -98,6 +98,12 @@ section p {
   margin-top: 20px;
 }
 
+@media (max-width: 767px) {
+  .cards {
+    flex-direction: column;
+  }
+}
+
 .card {
   flex: 1;
   background-color: #ffffff;
