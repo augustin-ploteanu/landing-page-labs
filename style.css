@@ -295,3 +295,78 @@ footer .container {
   padding: 0;
   border-radius: 0;
 }
+
+/*mascot*/
+.mascot {
+  position: fixed;
+  right: 22px;
+  bottom: 22px;
+  z-index: 1200;
+  display: inline-flex;
+  align-items: flex-end;
+}
+
+.mascot img {
+  width: 128px;
+  height: 128px;
+  object-fit: contain;
+  border-radius: 50%;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.25);
+  transform-origin: bottom right;
+  animation: mascot-pulse 2.2s ease-in-out infinite;
+}
+
+.mascot-message {
+  position: absolute;
+  right: 98px;
+  bottom: 98px;
+  margin: 0;
+  width: 220px;
+  padding: 10px 12px;
+  border-radius: 10px;
+  background: #ffffff;
+  border: 1px solid #e3dccf;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.16);
+  color: #222;
+  font-size: 0.9rem;
+  line-height: 1.35;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(6px);
+  transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease;
+}
+
+.mascot:hover .mascot-message {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+@keyframes mascot-pulse {
+  0%,
+  100% {
+    transform: scale(1) translate(0, 0);
+  }
+  50% {
+    transform: scale(1.12) translate(6px, -6px);
+  }
+}
+
+@media (max-width: 576px) {
+  .mascot {
+    right: 14px;
+    bottom: 14px;
+  }
+
+  .mascot img {
+    width: 68px;
+    height: 68px;
+  }
+
+  .mascot-message {
+    right: 78px;
+    bottom: 46px;
+    max-width: 175px;
+    font-size: 0.82rem;
+  }
+}
