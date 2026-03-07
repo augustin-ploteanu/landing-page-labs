@@ -30,10 +30,16 @@ The site can be accesed [here](https://augustin-ploteanu.github.io/landing-page-
 * Rounded card components with hover lift effect
 * Centered section titles with decorative accent underline
 * Call-to-action section with form
+* Animated mascot with message
+* Mobile only section
 
 ---
 
 ## Screenshots
+
+![4](screenshots/4.png)
+
+![5](screenshots/5.png)
 
 ![1](screenshots/1.png)
 

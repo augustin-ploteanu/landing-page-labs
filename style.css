@@ -98,6 +98,12 @@ section p {
   margin-top: 20px;
 }
 
+@media (max-width: 767px) {
+  .cards {
+    flex-direction: column;
+  }
+}
+
 .card {
   flex: 1;
   background-color: #ffffff;
@@ -221,10 +227,6 @@ section p {
   background-color: #333;
 }
 
-#cta button:hover {
-  background-color: #ddd;
-}
-
 /*navbar*/
 
 header {
@@ -242,44 +244,23 @@ nav {
   height: 60px;
 }
 
-.logo {
-  font-size: 1.2rem;
-  font-weight: bold;
-  text-decoration: none;
-  color: #111;
-}
-
-.nav-links {
-  display: flex;
-  gap: 25px;
-}
-
-.nav-links a {
-  text-decoration: none;
-  color: #222;
-  font-weight: 500;
-  transition: 0.2s ease;
-}
-
-.nav-links a:hover {
-  color: #000;
-}
-
-.nav-cta {
-  padding: 6px 12px;
-  background-color: #111;
-  color: #fff !important;
-  border-radius: 4px;
-}
-
-.nav-cta:hover {
-  background-color: #444;
-}
-
 header .container {
   padding: 0 15px;
   border-radius: 0;
   background-color: transparent;
+}
+
+@media (max-width: 767px) {
+  .navbar-collapse {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 60px;
+    width: 100vw;
+    background-color: #fff;
+    padding: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  }
 }
 
 /*footer*/
@@ -294,4 +275,97 @@ footer .container {
   background: none;
   padding: 0;
   border-radius: 0;
+}
+
+/*mascot*/
+.mascot {
+  position: fixed;
+  right: 22px;
+  bottom: 22px;
+  z-index: 1200;
+  display: inline-flex;
+  align-items: flex-end;
+  opacity: 0;
+  animation: show-mascot 0.5s ease forwards;
+  animation-delay: 0.5s;
+}
+
+@keyframes show-mascot {
+  to {
+    opacity: 1;
+  }
+}
+
+.mascot img {
+  width: 128px;
+  height: 128px;
+  object-fit: contain;
+  border-radius: 50%;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.25);
+  transform-origin: bottom right;
+  animation: mascot-pulse 2.2s ease-in-out infinite;
+  cursor: pointer;
+}
+
+.mascot-message {
+  position: absolute;
+  right: 98px;
+  bottom: 98px;
+  margin: 0;
+  width: 220px;
+  padding: 10px 12px;
+  border-radius: 10px;
+  background: #ffffff;
+  border: 1px solid #e3dccf;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.16);
+  color: #222;
+  font-size: 0.9rem;
+  line-height: 1.35;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(6px);
+  transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .mascot:hover .mascot-message {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+}
+
+.mascot.is-open .mascot-message {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+@keyframes mascot-pulse {
+  0%,
+  100% {
+    transform: scale(1) translate(0, 0);
+  }
+  50% {
+    transform: scale(1.12) translate(6px, -6px);
+  }
+}
+
+@media (max-width: 576px) {
+  .mascot {
+    right: 14px;
+    bottom: 14px;
+  }
+
+  .mascot img {
+    width: 68px;
+    height: 68px;
+  }
+
+  .mascot-message {
+    right: 78px;
+    bottom: 46px;
+    max-width: 175px;
+    font-size: 0.82rem;
+  }
 }
