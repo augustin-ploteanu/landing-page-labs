@@ -199,25 +199,30 @@
 
     </main>
 
-    <div class="mascot" aria-label="Helper mascot">
-        <img src="mascot.png"/>
-        <p class="mascot-message">Need help choosing a lesson? Book a free trial.</p>
+    <div class="mascot" id="mascot">
+        <button class="mascot-trigger" type="button" aria-expanded="false" aria-label="Open mascot message">
+            <img src="mascot.png"/>
+        </button>
+        <p class="mascot-message" id="mascot-message">Need help choosing a lesson? Book a free trial.</p>
     </div>
 
     <script>
-    const mascot = document.querySelector('.mascot');
-    if (mascot) {
-        mascot.addEventListener('click', function (e) {
-        if (window.matchMedia('(hover: none)').matches) {
-            e.preventDefault();
-            e.stopPropagation();
-            mascot.classList.toggle('is-open');
-        }
+    const mascot = document.getElementById('mascot');
+    const trigger = mascot?.querySelector('.mascot-trigger');
+
+    if (mascot && trigger) {
+        trigger.addEventListener('click', function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+
+        const isOpen = mascot.classList.toggle('is-open');
+        trigger.setAttribute('aria-expanded', String(isOpen));
         });
 
         document.addEventListener('click', function (e) {
         if (!mascot.contains(e.target)) {
             mascot.classList.remove('is-open');
+            trigger.setAttribute('aria-expanded', 'false');
         }
         });
     }
