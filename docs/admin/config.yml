@@ -1,0 +1,70 @@
+backend:
+  name: github
+  repo: augustin-ploteanu/landing-page-labs
+  branch: main
+
+# Enables local editing via `npx decap-server` during development
+local_backend: true
+
+media_folder: "src"
+public_folder: "/"
+
+collections:
+  - name: "settings"
+    label: "Site Settings"
+    files:
+      - name: "site"
+        label: "Site Content"
+        file: "src/_data/site.yaml"
+        fields:
+          - label: "Hero Section"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Heading", name: "heading", widget: "string" }
+              - { label: "Primary Button", name: "cta_primary", widget: "string" }
+              - { label: "Secondary Button", name: "cta_secondary", widget: "string" }
+
+          - label: "Who It's For"
+            name: "who"
+            widget: "object"
+            fields:
+              - { label: "Section Heading", name: "heading", widget: "string" }
+              - label: "Cards"
+                name: "cards"
+                widget: "list"
+                fields:
+                  - { label: "Title", name: "title", widget: "string" }
+                  - { label: "Text", name: "text", widget: "text" }
+
+          - label: "Lesson Formats"
+            name: "formats"
+            widget: "object"
+            fields:
+              - { label: "Section Heading", name: "heading", widget: "string" }
+              - label: "Cards"
+                name: "cards"
+                widget: "list"
+                fields:
+                  - { label: "Title", name: "title", widget: "string" }
+                  - { label: "Description", name: "description", widget: "text" }
+                  - label: "Bullet Points"
+                    name: "points"
+                    widget: "list"
+
+          - label: "Coach"
+            name: "coach"
+            widget: "object"
+            fields:
+              - { label: "Section Heading", name: "heading", widget: "string" }
+              - { label: "Name", name: "name", widget: "string" }
+              - { label: "FIDE Rating", name: "rating", widget: "string" }
+              - { label: "Years of Coaching", name: "years", widget: "string" }
+              - { label: "Students Coached", name: "students", widget: "string" }
+
+          - label: "Call to Action"
+            name: "cta"
+            widget: "object"
+            fields:
+              - { label: "Heading", name: "heading", widget: "string" }
+              - { label: "Form Legend", name: "legend", widget: "string" }
