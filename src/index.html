@@ -1,0 +1,240 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chess Lessons</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+
+    <header class="sticky-top bg-white shadow-sm">
+    <nav class="navbar navbar-expand-md">
+        <div class="container">
+        <a class="navbar-brand fw-bold" href="#home">Chess Lessons</a>
+
+        <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#mainNav"
+            aria-controls="mainNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+        >
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="mainNav">
+            <ul class="navbar-nav ms-auto align-items-md-center gap-md-2">
+            <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#who">Who It’s For</a></li>
+            <li class="nav-item"><a class="nav-link" href="#formats">Lesson Formats</a></li>
+            <li class="nav-item"><a class="nav-link" href="#coach">Coach</a></li>
+            <li class="nav-item">
+                <a class="btn btn-dark ms-md-2 mt-2 mt-md-0" href="#cta">Free Trial</a>
+            </li>
+            </ul>
+        </div>
+        </div>
+    </nav>
+    </header>
+
+    <main>
+    <section id="home">
+        <div class="container bg-white rounded-4 p-4 p-md-5">
+        <h1>Learn Chess - From Beginner to Tournament Level</h1>
+        
+            <div class="hero-buttons">
+                <a href="#cta">Book a Free Trial Lesson</a>
+                <a href="#formats">See Lesson Options</a>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="who">
+        <div class="container bg-white rounded-4 p-4 p-md-5">
+        <h2>Who These Lessons Are For</h2>
+
+        <div class="cards">
+            <div class="card">
+            <h3>Complete Beginners</h3>
+            <p>
+                Learn the rules, basic tactics, and how to play confidently without feeling overwhelmed.
+            </p>
+            </div>
+
+            <div class="card">
+            <h3>Intermediate Players</h3>
+            <p>
+                Stop blundering, spot tactics faster, and learn plans you can use in real games.
+            </p>
+            </div>
+
+            <div class="card">
+            <h3>Competitive Students</h3>
+            <p>
+                Openings, endgames, and tournament preparation to improve your rating efficiently.
+            </p>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <section id="formats">
+        <div class="container bg-white rounded-4 p-4 p-md-5">
+        <h2>Lesson Formats</h2>
+
+        <div class="cards">
+            <div class="card">
+            <h3>1-on-1 Coaching</h3>
+            <p>Best for fast improvement with personalised feedback and game review.</p>
+            <ul>
+                <li>Customised openings and endgames</li>
+                <li>Analysis of your games</li>
+                <li>Training plan between lessons</li>
+            </ul>
+            </div>
+
+            <div class="card">
+            <h3>Online Lessons</h3>
+            <p>Train from anywhere using an interactive board and shared analysis.</p>
+            <ul>
+                <li>Screen-share + annotated boards</li>
+                <li>Recorded notes or recap</li>
+                <li>Flexible scheduling</li>
+            </ul>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <section id="coach">
+    <div class="container bg-white rounded-4 p-4 p-md-5">
+        <h2>Meet Your Coach</h2>
+
+        <div class="coach-layout">
+        <div class="coach-image">
+            <img src="coach.jpg"/>
+        </div>
+
+        <div class="coach-info">
+            <h3>Name Surname</h3>
+
+            <div class="cards">
+            <div class="card">
+                <h3>FIDE Rating</h3>
+                <p>2200</p>
+            </div>
+
+            <div class="card">
+                <h3>Years of Coaching</h3>
+                <p>10</p>
+            </div>
+
+            <div class="card">
+                <h3>Students Coached</h3>
+                <p>200+</p>
+            </div>
+            </div>
+        </div>
+        </div>
+    </div>
+    </section>
+
+    <section id="cta">
+    <div class="container bg-white rounded-4 p-4 p-md-5">
+        <h2>Ready to Improve?</h2>
+
+        <form action="#" method="post" aria-label="Book a free trial lesson" class="mx-auto" style="max-width: 420px;">
+        <fieldset>
+            <legend class="fw-bold mb-4">Book your free trial</legend>
+
+            <div class="mb-3">
+            <label for="name" class="form-label">Name</label>
+            <input id="name" name="name" type="text" class="form-control" autocomplete="name" required />
+            </div>
+
+            <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input id="email" name="email" type="email" class="form-control" autocomplete="email" required />
+            </div>
+
+            <div class="mb-4">
+            <label for="level" class="form-label">Current level</label>
+            <select id="level" name="level" class="form-select" required>
+                <option value="" selected disabled>Select one</option>
+                <option value="beginner">Beginner</option>
+                <option value="intermediate">Intermediate</option>
+                <option value="competitive">Competitive</option>
+            </select>
+            </div>
+
+            <button type="submit" class="btn btn-dark w-100">Request Trial Lesson</button>
+        </fieldset>
+        </form>
+    </div>
+    </section>
+
+    <section id="mobile-app" class="d-md-none py-4">
+    <div class="container bg-white rounded-4 p-4 p-md-5 text-center">
+        <div class="mx-auto" style="max-width: 420px;">
+        <h2 class="h3 mb-3">Train on the Go</h2>
+
+        <p class="mb-4">
+            Use our mobile chess app to solve puzzles, review lessons, and stay sharp wherever you are.
+        </p>
+
+        <div class="d-grid gap-2 mb-3">
+            <a href="#" class="btn btn-dark">Download on App Store</a>
+            <a href="#" class="btn btn-outline-dark">Get it on Google Play</a>
+        </div>
+
+        <a href="#cta" class="btn btn-secondary w-100">Book a Free Lesson First</a>
+        </div>
+    </div>
+    </section>
+
+    </main>
+
+    <div class="mascot" id="mascot">
+        <button class="mascot-trigger" type="button" aria-expanded="false" aria-label="Open mascot message">
+            <img src="mascot.png"/>
+        </button>
+        <p class="mascot-message" id="mascot-message">Need help choosing a lesson? Book a free trial.</p>
+    </div>
+
+    <script>
+    const mascot = document.getElementById('mascot');
+    const trigger = mascot?.querySelector('.mascot-trigger');
+
+    if (mascot && trigger) {
+        trigger.addEventListener('click', function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+
+        const isOpen = mascot.classList.toggle('is-open');
+        trigger.setAttribute('aria-expanded', String(isOpen));
+        });
+
+        document.addEventListener('click', function (e) {
+        if (!mascot.contains(e.target)) {
+            mascot.classList.remove('is-open');
+            trigger.setAttribute('aria-expanded', 'false');
+        }
+        });
+    }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+
+    <footer>
+    <div class="container">
+        <p>&copy; 2026 Chess Lessons. All rights reserved.</p>
+    </div>
+    </footer>
+
+</html>
