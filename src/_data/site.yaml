@@ -1,0 +1,40 @@
+hero:
+  heading: Chess Lessons - From Beginner to Tournament Level
+  cta_primary: Book a Free Trial Lesson
+  cta_secondary: See Lesson Options
+who:
+  heading: Who These Lessons Are For
+  cards:
+    - title: Complete Beginners
+      text: Learn the rules, basic tactics, and how to play confidently without
+        feeling overwhelmed.
+    - title: Intermediate Players
+      text: Stop blundering, spot tactics faster, and learn plans you can use in real
+        games.
+    - title: Competitive Students
+      text: Openings, endgames, and tournament preparation to improve your rating
+        efficiently.
+formats:
+  heading: Lesson Formats
+  cards:
+    - title: 1-on-1 Coaching
+      description: Best for fast improvement with personalised feedback and game review.
+      points:
+        - Customised openings and endgames
+        - Analysis of your games
+        - Training plan between lessons
+    - title: Online Lessons
+      description: Train from anywhere using an interactive board and shared analysis.
+      points:
+        - Screen-share + annotated boards
+        - Recorded notes or recap
+        - Flexible scheduling
+coach:
+  heading: Meet Your Coach
+  name: Name Surname
+  rating: "2200"
+  years: "10"
+  students: 200+
+cta:
+  heading: Ready to Improve?
+  legend: Book your free trial
