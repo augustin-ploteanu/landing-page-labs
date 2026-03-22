@@ -1,48 +1,56 @@
-# ♟️ Chess Lessons Landing Page
-
-## Overview
-
-This project is a landing page for a chess coaching website.
-It presents coaching services, lesson formats, instructor information, and a call-to-action for booking a free trial lesson. The design focuses on structured content and a chess-themed visual style.
-
----
+# SSG & CMS Integration
 
 ## Demo
 
-The site can be accesed [here](https://augustin-ploteanu.github.io/landing-page-labs).
+The site can be accessed [here](https://augustin-ploteanu.github.io/landing-page-labs).
 
 ---
 
-## Sections Included
+## Features Added
 
-* Hero Section
-* Who These Lessons Are For
-* How It Works
-* Lesson Formats
-* Meet Your Coach
-* Call To Action (Trial Booking)
+* **Eleventy (11ty) static site generator** — HTML is now built from templates rather than served as raw files
+* **Decap CMS** — web-based admin UI at `/admin/` for editing content without touching code
+* **Local CMS proxy** — content can be edited locally without GitHub authentication using `npx decap-server`
 
 ---
 
-## Design Features
+## Getting Started
 
-* Checkerboard background applied to the main content area
-* Rounded card components with hover lift effect
-* Centered section titles with decorative accent underline
-* Call-to-action section with form
-* Animated mascot with message
-* Mobile only section
+### Install dependencies
+
+```bash
+npm install
+```
+
+### Run the development server
+
+```bash
+npm start
+```
+
+The site will be available at `http://localhost:8080`.
+
+### Build for production
+
+```bash
+npm run build
+```
+
+Output is generated in `_site/` (not committed to git).
 
 ---
 
-## Screenshots
+## Content Management (Decap CMS)
 
-![4](screenshots/4.png)
+All site content (headings, cards, coach stats) is stored in `src/_data/site.yaml` and surfaced through Decap CMS at the `/admin/` route.
 
-![5](screenshots/5.png)
+### Local editing
 
-![1](screenshots/1.png)
+Run both commands in separate terminals:
 
-![2](screenshots/2.png)
+```bash
+npx decap-server  
+npm start          
+```
 
-![3](screenshots/3.png)
+Then open `http://localhost:8080/admin/` to edit content without any authentication.
